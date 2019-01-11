@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Digital';
+  src: url(digital-7.ttf);
+  font-style: bold;
+  font-weight: bold;
+}
+
 .calculator_body {
   height: 55vh;
   width: 27vw;
@@ -13,10 +20,15 @@
 
 .display {
   height: 17%;
-  width: 85%;
+  width: 80%;
   border-radius: 15px;
   background-color: white;
   margin: 0 auto 4% auto;
+  font-family: 'Digital', sans-serif;
+  font-size: 8vh;
+  text-align: right;
+  line-height: 130%;
+  padding-right: 5%;
 }
 
 .row {
@@ -27,7 +39,7 @@
   justify-content: space-evenly;
 }
 
-.btn, .c {
+button {
   background-color: white;
   text-align: center;
   font-size: 2vw;
@@ -35,11 +47,11 @@
   font-weight: 700;
 }
 
-.btn {
+.num, .op, .equal {
   width: 17%;
 }
 
-.c {
+.clear, .clear_all {
   width: 40%;
   margin-bottom: 2%;
 }
