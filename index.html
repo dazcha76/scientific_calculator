@@ -5,46 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
 
-    <div class="calculator_body">
-      <div class="display">0</div>
+    <div class="tab"><i class="fas fa-angle-left"></i></div>
 
-      <div class="row">
-        <button class="clear_all">C</button>
-        <button class="clear">CE</button>
+      <div class="calc_container">
+        <div class="classic_calculator">
+          <div class="display">0</div>
+
+          <div class="row">
+            <button class="clear_all">C</button>
+            <button class="clear_element">CE</button>
+            <button class="pos_neg"><span>+</span>/<span class="sub">-</span></button>
+            <button class="percent">%</button>
+          </div>
+
+          <div class="row">
+            <button class="num">7</button>
+            <button class="num">8</button>
+            <button class="num">9</button>
+            <button class="op divide">/</button>
+          </div>
+
+          <div class="row">
+            <button class="num">4</button>
+            <button class="num">5</button>
+            <button class="num">6</button>
+            <button class="op multiply">*</button>
+          </div>
+
+          <div class="row">
+            <button class="num">1</button>
+            <button class="num">2</button>
+            <button class="num">3</button>
+            <button class="op subtract">-</button>
+          </div>
+
+          <div class="row">
+            <button class="num">0</button>
+            <button class="num">.</button>
+            <button class="equal">=</button>
+            <button class="op add">+</button>
+          </div>  
+        </div>
       </div>
+      
+      <div class="scientific_calculator">
+        <div class="scientific_display"></div>
 
-      <div class="row">
-        <button class="num">7</button>
-        <button class="num">8</button>
-        <button class="num">9</button>
-        <button class="op divide">/</button>
+        <div class="row">
+          <button class="">(</button>
+          <button class="">)</button>
+          <button class="">mc</button>
+          <button class="">m+</button>
+          <button class="">m-</button>
+          <button class="">mr</button>
+        </div>
+
+        <div class="row">
+          <button class="second">2<span>nd</span></button>
+          <button class="squared">x<span>2</span></button>
+          <button class="cubed">x<span>3</span></button>
+          <button class="x-yed">x<span>y</span></button>
+          <button class="e-xed">e<span>x</span></button>
+          <button class="ten-xed">10<span>x</span></button>
+        </div>
+
+        <div class="row">
+          <button class="divide_by_x">1/x</button>
+          <button class="square_root"><span>2</span>&#8730;<span class="sub">x</span></button>
+          <button class="cube_root"><span>3</span>&#8730;<span class="sub">x</span></button>
+          <button class="y_root"><span>y</span>&#8730;<span class="sub">x</span></button>
+          <button class="">ln</button>
+          <button class="">log<span class="sub">10</span></button>
+        </div>
+
+        <div class="row">
+          <button class="">x!</button>
+          <button class="">sin</button>
+          <button class="">cos</button>
+          <button class="">tan</button>
+          <button class="napiers">e</button>
+          <button class="">EE</button>
+        </div>
+
+        <div class="row">
+          <button class="">Rad</button>
+          <button class="">sinh</button>
+          <button class="">cosh</button>
+          <button class="">tanh</button>
+          <button class="pi"><p>&#8764;</p><p class="bottom">ll</p></button>
+          <button class="randomNum">Rand</button>
+        </div> 
       </div>
-
-      <div class="row">
-        <button class="num">4</button>
-        <button class="num">5</button>
-        <button class="num">6</button>
-        <button class="op multiply">*</button>
-      </div>
-
-      <div class="row">
-        <button class="num">1</button>
-        <button class="num">2</button>
-        <button class="num">3</button>
-        <button class="op subtract">-</button>
-      </div>
-
-      <div class="row">
-        <button class="num">0</button>
-        <button class="num">.</button>
-        <button class="equal">=</button>
-        <button class="op add">+</button>
-      </div>  
-    </div>
 
   </body>
 </html>

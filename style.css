@@ -1,57 +1,214 @@
-@font-face {
-  font-family: 'Digital';
-  src: url(digital-7.ttf);
-  font-style: bold;
-  font-weight: bold;
+body {
+  height: 100vh;
+  width: 100vw;
 }
 
-.calculator_body {
-  height: 55vh;
-  width: 27vw;
-  margin: 10% auto 0 auto;
-  padding: 2% 0 1% 0;
-  border-radius: 25px;
-  background-color: blue;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-}
+/* BASIC CALCULATOR BODY */
 
-.display {
-  height: 17%;
-  width: 80%;
-  border-radius: 15px;
+.calc_container {
+  height: 70vh;
+  width: 100vw;
   background-color: white;
-  margin: 0 auto 4% auto;
-  font-family: 'Digital', sans-serif;
-  font-size: 8vh;
-  text-align: right;
-  line-height: 130%;
-  padding-right: 5%;
+  position: relative;
+  top: 4vh;
+  left: 38vw;
+  z-index: 1;
+  border-radius: 25px;
 }
 
 .row {
-  height: 12%;
+  height: 10%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
 }
 
+.classic_calculator, .scientific_calculator {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
 button {
-  background-color: white;
+  background-color: #323232;
+  border: #4c4c4c;
   text-align: center;
-  font-size: 2vw;
   border-radius: 25px;
-  font-weight: 700;
+  font-weight: 600;
+  color: white;
+  outline: none;
 }
 
-.num, .op, .equal {
-  width: 17%;
+.num {
+  background-color: #666666;
 }
 
-.clear, .clear_all {
-  width: 40%;
-  margin-bottom: 2%;
+.op {
+  background-color: #ffa500;
+  border: #ffa500;
+}
+
+.clear_element, .clear_all, .percent, .pos_neg {
+  color: black;
+  background-color: #cccccc;
+  border: #b2b2b2;
+}
+
+.tab {
+  height: 10vh;
+  width: 2vw;
+  background-color: #ffa500;
+  position: relative;
+  top: 19vh;
+  left: 36vw;
+  border-radius: 50% 0 0 50%;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes move_tab_left {
+  from {left: 36vw;}
+  to {left: 16vw;}
+}
+
+@keyframes move_tab_right {
+  from {left: 16vw;}
+  to {left: 36vw;}
+}
+
+.fas {
+  color: white;
+  font-weight: 900;
+  font-size: 2vw;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  transform: translate(35% 35%);
+}
+
+/*CLASSIC CALCULATOR*/
+
+.calc_container {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes move_container_right {
+  from {left: 38vw; border-radius: 25px;}
+  to {left: 52vw; border-radius: 0 25px 25px 0;}
+}
+
+@keyframes move_container_left {
+  from {left: 52vw; border-radius: 0 25px 25px 0;}
+  to {left: 38vw; border-radius: 25px;}
+}
+
+.classic_calculator {
+  height: 70vh;
+  width: 24vw;
+  border-radius: 25px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes move_calc_right {
+  from {border-radius: 25px;}
+  to {border-radius: 0 25px 25px 0;}
+}
+
+@keyframes move_calc_left {
+  from {border-radius: 0 25px 25px 0;}
+  to {border-radius: 25px;}
+}
+
+.display {
+  height: 14%;
+  width: 80%;
+  border-radius: 15px;
+  background-color: black;
+  margin: 4% auto;
+  font-family: 'Digital', sans-serif;
+  font-size: 8vh;
+  text-align: right;
+  line-height: 130%;
+  padding-right: 5%;
+  color: white;
+}
+
+.classic_calculator button { 
+  width: 16%;
+  font-size: 2vw;
+}
+
+/*SCIENTIFIC CALCULATOR*/
+
+.scientific_calculator {
+  height: 70vh;
+  width: 35vw;
+  border-radius: 25px;
+  position: relative;
+  top: -66vh;
+  left: 38vw;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes move_sci_left {
+  from {left: 38vw; border-radius: 25px;}
+  to {left: 18vw; border-radius: 25px 0 0 25px;}
+}
+
+@keyframes move_sci_right {
+  from {left: 18vw; border-radius: 25px 0 0 25px;}
+  to {left: 38vw; border-radius: 25px;}
+}
+
+.scientific_display {
+  height: 14%;
+  width: 0%;
+  border-radius: 15px;
+  background-color: white;
+  margin: 2.74% auto;
+}
+
+.scientific_calculator button {
+  width: 13%;
+  font-size: 1.5vw;
+}
+
+span {
+  vertical-align: super;
+  font-size: 1vw;
+}
+
+.sub {
+  vertical-align: sub;
+}
+
+.pos_neg span {
+  font-size: 1.5vw;
+}
+
+p {
+  margin: 0;
+}
+
+p:first-child {
+  margin-top: -20%;
+}
+
+.bottom {
+  margin-top: -31%;
+}
+
+.num, .op, .clear_all, .clear_element, .percent, .equal, .squared, .cubed, .e-xed, .ten-xed, .napiers, .pi, .randomNum, .pos_neg {
+  background-color: #ffa500;
+  cursor: pointer;
 }
